@@ -1,0 +1,177 @@
+.results-page { padding-bottom: 80px; }
+
+.results-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 36px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+}
+.results-header h2 { font-size: 1.6rem; margin-bottom: 4px; }
+.results-date { color: var(--text-muted); font-size: 0.9rem; }
+.back-btn { flex-shrink: 0; }
+
+.sort-control { margin-left: auto; min-width: 140px; }
+.sort-select { padding: 10px 14px; }
+
+.results-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.results-list { display: flex; flex-direction: column; gap: 20px; }
+
+.result-card { padding: 28px; }
+
+.result-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.result-left { flex: 1; min-width: 240px; }
+.result-name { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+.train-no { color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
+.result-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; }
+.result-type-badge { margin-bottom: 12px; }
+
+/* Route bar */
+.result-route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.rt-city { font-weight: 700; font-size: 1rem; }
+.rt-time { color: var(--text-muted); font-size: 0.9rem; }
+.rt-bar {
+  flex: 1;
+  min-width: 80px;
+  height: 2px;
+  background: var(--glass-border);
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rt-dur {
+  position: absolute;
+  top: -18px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Amenities */
+.result-amenities { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.amenity-tag {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Right side */
+.result-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.result-rating { display: flex; align-items: center; gap: 8px; }
+.rating-val { font-size: 0.9rem; font-weight: 600; color: var(--amber); }
+
+.result-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--amber);
+}
+.seats-left { font-size: 0.8rem; color: var(--success); font-weight: 500; }
+
+.book-btn { padding: 10px 28px; border-radius: 10px; font-size: 0.95rem; }
+
+/* ── Header meta chips ──────────────────────────────── */
+.results-header-info { flex: 1; }
+.results-header-info h2 { margin: 0 0 6px; font-size: 1.4rem; }
+.results-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.meta-chip {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.results-controls { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+.filter-toggle.active { border-color: var(--amber); color: var(--amber); }
+
+/* ── Smart Filter Panel ─────────────────────────────── */
+.filter-panel { margin-bottom: 20px; padding: 20px 24px; }
+.filter-row { display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
+.filter-group { display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 180px; }
+.filter-group-reset { flex: 0; justify-content: flex-end; padding-top: 22px; }
+.filter-label { font-size: 0.85rem; color: var(--text-muted); }
+.filter-label strong { color: var(--white); }
+
+/* Price range slider */
+.price-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--glass-border);
+  outline: none;
+  cursor: pointer;
+}
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--amber);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(245,158,11,0.5);
+}
+.slider-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); }
+
+/* Rating pills */
+.rating-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.rating-pill {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.rating-pill:hover, .rating-pill.active {
+  background: rgba(245,158,11,0.15);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* Multi-pax total */
+.total-price { font-size: 0.78rem; color: var(--text-muted); text-align: right; margin-top: -6px; }
+
+/* Loading text */
+.loading-text { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 8px; }
+
+@media (max-width: 640px) {
+  .result-main { flex-direction: column; align-items: stretch; }
+  .result-right { align-items: flex-start; }
+  .results-header { flex-direction: column; }
+  .results-controls { width: 100%; }
+  .filter-row { flex-direction: column; gap: 20px; }
+}

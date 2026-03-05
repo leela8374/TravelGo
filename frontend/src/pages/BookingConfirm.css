@@ -1,0 +1,114 @@
+.confirm-page { padding-bottom: 80px; }
+
+.confirm-wrap { padding-top: 48px; max-width: 1000px; margin: 0 auto; }
+.confirm-title { margin-bottom: 36px; }
+
+.confirm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* Summary card */
+.summary-card, .options-card { padding: 32px; }
+.summary-card h3, .options-card h3 { margin-bottom: 24px; color: var(--amber); }
+
+.summary-rows { display: flex; flex-direction: column; gap: 14px; }
+.sum-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--glass-border);
+  font-size: 0.92rem;
+  gap: 12px;
+}
+.sum-row:last-child { border-bottom: none; padding-bottom: 0; }
+.sum-row > span:first-child { color: var(--text-muted); flex-shrink: 0; }
+.sum-row > strong { text-align: right; }
+
+/* Options card */
+.option-row { margin-bottom: 20px; }
+
+/* Price breakdown */
+.price-breakdown {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin: 24px 0;
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  padding: 8px 0;
+  color: var(--text-muted);
+}
+.price-total {
+  border-top: 1px solid var(--glass-border);
+  margin-top: 8px;
+  padding-top: 14px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--amber);
+}
+
+.confirm-btn { width: 100%; padding: 14px; margin-bottom: 12px; border-radius: 12px; }
+.confirm-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* Success state */
+.success-wrap {
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 56px 40px;
+  text-align: center;
+}
+.success-icon { font-size: 4rem; margin-bottom: 20px; }
+.success-wrap h2 { margin-bottom: 12px; color: var(--success); }
+.success-wrap p { color: var(--text-muted); margin-bottom: 24px; }
+.success-ref {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  color: var(--text-muted);
+}
+.success-ref strong { color: var(--white); }
+.success-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ── Ticket Download Box ───────────────────────────────── */
+.ticket-download-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.05));
+  border: 1px solid rgba(245,158,11,0.35);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.ticket-icon { font-size: 2rem; flex-shrink: 0; }
+.ticket-info { flex: 1; min-width: 150px; }
+.ticket-title { font-weight: 700; font-size: 0.95rem; color: var(--white); margin-bottom: 4px; }
+.ticket-sub   { font-size: 0.82rem; color: var(--text-muted); }
+.download-btn { flex-shrink: 0; padding: 10px 22px; border-radius: 10px; font-size: 0.9rem; }
+.download-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* ── Email Sent Notice ─────────────────────────────────── */
+.email-sent-box {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  font-size: 0.85rem;
+  color: #6ee7b7;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .confirm-grid { grid-template-columns: 1fr; }
+}
